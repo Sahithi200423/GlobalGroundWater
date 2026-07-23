@@ -1,0 +1,153 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+/* --- Artistic Flair Theme Definitions --- */
+:root {
+  --bg-artistic-light: #FAF8F5; /* Premium Warm Ivory Canvas */
+  --bg-artistic-dark: #0A0915;  /* Deep Indigo-Night Canvas */
+  --accent-artistic: #D4AF37;   /* Metallic Gold Accent */
+}
+
+/* Elegant Typographic Pairings */
+.font-display-serif {
+  font-family: 'Playfair Display', serif;
+}
+
+.font-display-sans {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Organic Asymmetrical Card Shapes (Mathematical Corner-Nesting) */
+.artistic-card {
+  border-radius: 24px 8px 24px 8px;
+  transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.artistic-card:hover {
+  border-radius: 8px 24px 8px 24px;
+}
+
+/* Glassmorphism with Artistic Flair (Golds & Soft Indigo Glows) */
+.glass-panel {
+  background: rgba(10, 9, 21, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(212, 175, 55, 0.15); /* Subtle gold tint */
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
+}
+
+.glass-panel-light {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  box-shadow: 0 4px 30px rgba(139, 92, 26, 0.04);
+}
+
+/* Glowing backdrops representing subterranean energy and water reservoirs */
+.glow-artistic-blue {
+  box-shadow: 0 0 40px rgba(99, 102, 241, 0.25);
+}
+
+.glow-artistic-gold {
+  box-shadow: 0 0 40px rgba(212, 175, 55, 0.2);
+}
+
+/* Fluid painterly gradient text */
+.artistic-gradient-text {
+  background: linear-gradient(135deg, #6366F1 0%, #EC4899 50%, #F59E0B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.artistic-gradient-text-light {
+  background: linear-gradient(135deg, #4F46E5 0%, #D946EF 50%, #B45309 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Flowing abstract organic watercolor blobs */
+.artistic-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  mix-blend-mode: plus-lighter;
+  animation: floatBlob 12s infinite ease-in-out;
+}
+
+@keyframes floatBlob {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
+}
+
+/* Custom scrollbars with an antique gold & slate texture */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0915;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(212, 175, 55, 0.4);
+  border: 2px solid #0A0915;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(212, 175, 55, 0.7);
+}
+
+/* Wave organic ripples */
+@keyframes ripple {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.15;
+  }
+  100% {
+    transform: scale(2.2);
+    opacity: 0;
+  }
+}
+
+.water-ripple {
+  position: absolute;
+  border-radius: 50%;
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  animation: ripple 8s infinite linear;
+}
+
+/* Custom Animations */
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.glow-pulse {
+  animation: pulseGlow 5s infinite ease-in-out;
+}
